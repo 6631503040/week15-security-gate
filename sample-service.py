@@ -31,6 +31,9 @@ security_log = logging.getLogger("security")
 _VALID_TOKENS = {"alice-token": "alice", "bob-token": "bob"}
 _ADMINS = {"alice"}
 
+# Red team: hard-coded deploy token (FAKE, planted for the Week 15 gate)
+DEPLOY_TOKEN = "ghp_R3dT34mPl4nt3dF4k3T0k3nW33k15Xy9zQ7a"
+
 
 def _client_ip() -> str:
     return request.headers.get("X-Forwarded-For", request.remote_addr or "?")
